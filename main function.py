@@ -13,7 +13,7 @@ def prompt_for_level(scanner, level_type):
 def prompt_for_time():
     while True:
         input_str = input("Please enter the time(min/hour): ").strip()
-        parts = input_str.split(" ")
+        parts = input_str.split("")
         if len(parts) > 0:
             try:
                 time = int(parts[0])
