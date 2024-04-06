@@ -1,20 +1,20 @@
 class Priority:
-    def get_priority(self, urgency, impact):
+    def get_priority(self, urgency, difficulty):
         urgency = urgency.upper()
-        impact = impact.upper()
-        if not self.is_valid(urgency) or not self.is_valid(impact):
+        difficulty = difficulty.upper()
+        if not self.is_valid(urgency) or not self.is_valid(difficulty):
             raise ValueError("Invalid level input. Levels must be LOW, MEDIUM, or HIGH.")
-        if urgency == "HIGH" and impact == "HIGH":
+        if urgency == "HIGH" and difficulty == "HIGH":
             return "HIGH"
-        elif urgency == "MEDIUM" and impact == "HIGH":
+        elif urgency == "MEDIUM" and difficulty == "HIGH":
             return "HIGH"
-        elif urgency == "HIGH" and impact == "MEDIUM":
+        elif urgency == "HIGH" and difficulty == "MEDIUM":
             return "HIGH"
-        elif urgency == "MEDIUM" and impact == "MEDIUM":
+        elif urgency == "MEDIUM" and difficulty == "MEDIUM":
             return "MEDIUM"
-        elif urgency == "HIGH" and impact == "LOW":
+        elif urgency == "HIGH" and difficulty == "LOW":
             return "MEDIUM"
-        elif urgency == "LOW" and impact == "HIGH":
+        elif urgency == "LOW" and difficulty == "HIGH":
             return "MEDIUM"
         else:
             return "LOW"
